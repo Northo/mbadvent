@@ -19,7 +19,7 @@ function opensOn(index) {
 </script>
 
 <template>
-  <h1 class="3xl my-5">Julekalender Molthe-Ballestad</h1> 
+  <h1 class="3xl my-5">Julekalender <span class="whitespace-nowrap">Molthe-Ballestad</span></h1> 
   <div class="flex flex-wrap gap-1">
     <FlipCard v-for="(day, index) in json" 
       :image="day.image"
