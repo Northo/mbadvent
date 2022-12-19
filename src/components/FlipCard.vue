@@ -8,6 +8,10 @@ export default {
         opensOn: moment.Moment,
         image: String,
         day: Number,
+	is_video: {
+          type: Boolean,
+          default: false
+        }
     },
     computed: {
         open() {
@@ -51,7 +55,8 @@ export default {
                    <arrow-expand-all-icon />
                   </a>
                 </span>
-                <img :src=imageSmallURL alt="Missing image" />
+                <img v-if="!is_video" :src=imageSmallURL alt="Missing image" />
+                <video v-else :src=imageURL controls  type="video/mp4" class="object-cover h-1/1"></video>
             </div>
         </div>
     </div>

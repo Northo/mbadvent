@@ -24,6 +24,7 @@ function opensOn(index) {
     <FlipCard v-for="(day, index) in json" 
       :image="day.image"
       :day="index + 1"
+      :is_video="day.is_video"
       :opensOn="opensOn(index)"
       :flipped="flipped(index)"
     />
